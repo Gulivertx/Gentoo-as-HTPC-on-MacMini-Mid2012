@@ -1,0 +1,27 @@
+#!/sbin/openrc-run
+# Starting Awesome WM with the user kodi
+# By gulivert - http://gulivert.ch 
+
+description="Start and stop Kodi"
+
+depend()
+{
+	need net
+}
+
+start()
+{
+        ebegin "Starting Awesome WM"
+	export AE_SINK=ALSA
+        start-stop-daemon --start -u ${KODI_USER:-kodi} --background --pidfile /var/run/awesome.pid --make-pidfile --exec /usr/bin/startx ${AWESOME_OPTS}
+        eend $?
+}
+
+stop()
+{
+        ebegin "Stopping Awesome WM"
+        #start-stop-daemon --stop --pidfile /var/run/awesome.pid
+        killall X
+	eend $?
+}
+

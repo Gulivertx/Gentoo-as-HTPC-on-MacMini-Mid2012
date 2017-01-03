@@ -1,0 +1,19 @@
+# Kodi
+media-tv/kodi ~amd64
+media-video/ffmpeg ~amd64
+net-misc/shairplay ~amd64
+media-sound/dcadec ~amd64
+dev-libs/crossguid ~amd64
+
+# Wireless drivers
+net-wireless/broadcom-sta ~amd64
+
+# Steam overlay
+games-util/steam-client-meta ~amd64
+games-util/steam-games-meta ~amd64
+games-util/steam-meta ~amd64
+games-util/steam-launcher ~amd64
+media-fonts/steamfonts ~amd64
+
+#GCC needed by pvr.zattoo
+=sys-devel/gcc-5.3.0 ~amd64

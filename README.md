@@ -13,7 +13,8 @@ This configuration files are focus to use the Mac Mini as an HTPC with a light c
 
 This installation will start automatically Awesome WM with a user call *kodi* at the end of the boot sequence. Awesome WM will start 
 automatically Kodi to have our Mac Mini ready to use directly after the boot.
-The input will be mainly do with the Apple Remote for Kodi and an Xbox One controller for Kodi. There is also the ability to pair keyboard/mouse 
+The input will be mainly do with the Apple Remote for Kodi and an Xbox One controller for Steam. There is also the ability to pair 
+keyboard/mouse 
 by bluetooth.
 
 All How-To can be found here:

@@ -1,0 +1,1 @@
+# Gentoo-as-HTPC-on-MacMini-Mid2012

@@ -1,0 +1,29 @@
+pcm.amix {
+  type dmix
+  ipc_key 50557
+  slave {
+                pcm "hw:0,DEV=8"
+                period_time 0
+                period_size 1024        # 1024
+                buffer_size 8192        # 8192
+                periods 128             # added
+                rate 48000             # added
+        }
+}
+
+pcm.asnoop {
+  type dsnoop
+  slave.pcm "hw:SB,0,0"
+}
+
+# duplex device combining our PCM devices defined above
+pcm.aduplex {
+  type asym
+  playback.pcm "amix"
+  capture.pcm "asnoop"
+}
+
+pcm.!default {
+  type plug
+  slave.pcm "aduplex"
+}
